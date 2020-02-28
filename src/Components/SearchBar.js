@@ -2,11 +2,11 @@ import React, {useState,useEffect, useCallback} from "react"
 import SearchButton from "./SearchButton"
 import SingleMovie from "./SingleMovie"
 import userDebounce from "../Helpers/useDebounce.js"
-import loader from "./loader.gif"
+import loader from "../Assets/loader.gif"
 import '../style.css'
 function SearchBar(){
 
-      const test ={
+      const wrapperDiv ={
         width: "100%",
         height: "100%",
         display: "flex",
@@ -68,7 +68,7 @@ function SearchBar(){
     )
 
       return (
-        <div style={test}>
+        <div style={wrapperDiv}>
           <div className="searchBar">
           <input
               value={inputValue}

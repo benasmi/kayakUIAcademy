@@ -3,7 +3,6 @@
     font-family: helvetica !important;
 }
 
-
 body {
     margin: 0;
     background-color: white;
@@ -62,8 +61,8 @@ input {
   color: white;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.2);
-  background-image: url(movie.svg); /* 16px x 16px */
-  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-image: url(./Assets/movie.svg);
+  background-repeat: no-repeat;
   background-position: 16px 50%;
 }
 

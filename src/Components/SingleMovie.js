@@ -10,11 +10,16 @@ export default class SingleMovie extends React.Component{
 
     console.log(this.props.item)
 
+    const noImageSrc = "https://www.solidbackgrounds.com/images/3600x3600/3600x3600-white-solid-color-background.jpg"
     const imgSrc = "https://image.tmdb.org/t/p/w500" + this.props.item.poster_path
     console.log(imgSrc)
+
     const imgStyle = {
       width: "32px",
-      height: "32px"
+      height: "32px",
+      border: "0px",
+      backgroundColor: "transparent",
+      display: "inline-block"
     }
 
     const description = {
@@ -29,7 +34,7 @@ export default class SingleMovie extends React.Component{
     return(
       <div className="singleMovieContent" onClick={()=>this.props.handleCardClick(this.props.item)}>
         <div>
-          <img style={imgStyle} src={imgSrc}/>
+          <img style={imgStyle} src={this.props.item.poster_path==null ? noImageSrc : imgSrc}/>
         </div>
 
         <div style={infoDiv}>
